@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Stock Log",
+  "description": "Check the prices of stocks",
+  "version": "1.0.0",
+  "icons":{"128": "icon_128.png"},
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
