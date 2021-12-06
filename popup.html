@@ -7,6 +7,71 @@
     <title>Stock Log</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+      <style>
+          html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 384px;
+          }
+          h1{
+            font-family: 'Menlo', monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: #2f5876;
+          }
+          a:link, a:visited{
+            color: #000;
+            outline: 0;
+            text-decoration: none;
+          }
+          img {
+            width: 30px;
+          }
+          .modal-header {
+            align-items: center;
+            border-bottom: 0.5px solid #dadada;
+          }
+          .modal-content {
+            padding: 0 22px;
+          }
+          .modal-icons {
+            border-top: 0.5px solid #dadada;
+            height: 50px;
+            width: 100%;
+          }
+          .logo {
+            padding: 16px;
+          }
+          .logo-icon {
+            vertical-align: text-bottom;
+            margin-right: 12px;
+          }
+          .version{
+            color: #444;
+            font-size: 18px;
+          }
+          .flex-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 22px;
+          }
+          .flex {
+            opacity: 1;
+            transition: opacity 0.2s eas-in-out;
+            width: 200px;
+          }
+          .flex:hover {
+            opacity: 0.4;
+          }
+          .flex .fa {
+            font-size: 40px;
+            color: #2f5876;
+          }
+      </style>
 </head>
 <body>
   <div class="modal-header">
@@ -28,5 +93,6 @@
           </div>
       </div>
   </div>
+  <script src="popup.js"></script>
 </body>
 </html>
