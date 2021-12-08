@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+    <!-- setting up the base of the extension -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stock Log</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.c
+    ss" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <!-- Style of my code -->
       <style>
+          /* Style of the whole body of the extension */
           html, body {
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
@@ -16,6 +20,7 @@
             padding: 0;
             width: 384px;
           }
+          /* set the style of what wraps the logo */
           h1{
             font-family: 'Menlo', monospace;
             font-size: 22px;
@@ -23,86 +28,113 @@
             margin: 0;
             color: #2f5876;
           }
+          /* set links to black with no outlines and no underlines */
           a:link, a:visited{
             color: #000;
             outline: 0;
             text-decoration: none;
           }
+          /* set image sie */
           img {
             width: 30px;
           }
+          /* set style for the modal header section */
+          /* align and create a border at the bottom of the section */
           .modal-header {
             align-items: center;
             border-bottom: 0.5px solid #dadada;
           }
+          /* style for description of the extension */
+          /* set it in between the sections with space */
           .modal-content {
             padding: 0 22px;
           }
+          /* set the style of where the icons are going to be with a border to separate */
           .modal-icons {
             border-top: 0.5px solid #dadada;
             height: 50px;
             width: 100%;
           }
+          /* style of the logo class */
           .logo {
             padding: 16px;
           }
+          /* align the logo in a line with margin */
           .logo-icon {
             vertical-align: text-bottom;
             margin-right: 12px;
           }
+          /* version number style */
           .version{
             color: #444;
             font-size: 18px;
           }
+          /* set the style details of the icons */
           .flex-container {
             display: flex;
             justify-content: space-between;
             padding: 10px 22px;
           }
+          /* set style for each item in flex */
           .flex {
             opacity: 1;
             transition: opacity 0.2s eas-in-out;
             width: 120px;
           }
+          /* set how the opacity changes when you hover over the icon */
           .flex:hover {
             opacity: 0.4;
-          }
-          .flex .fa {
-            font-size: 40px;
-            color: #2f5876;
           }
       </style>
 </head>
 <body>
+<!-- body of the code -->
+<!-- Creating the actual extension -->
   <div class="modal-header">
+      <!--  lass with the logo -->
       <h1 class = "logo">
+          <!-- Set the image source to the folder with the image -->
           <img src="images/logo.png" alt="Stock Log" class="logo-icon"> Stock Log <span class="version">(1.0.0)</span>
       </h1>
   </div>
   <div class="modal-content">
+      <!-- Create a class for the text describing the extension -->
+      <!-- paragraph for text -->
       <p>Access stock price data</p>
   </div>
   <div class="modal-icons">
+      <!-- class for all of the icons and where they link to -->
+      <!-- Also for the text below the icons -->
       <div class="flex-container">
+          <!-- icon class -->
           <div class="flex">
+              <!-- class for the first icon -->
+              <!-- link to the yahoo finance page -->
               <a href="https://finance.yahoo.com" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+                  <!-- code for getting the icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2f5876" class="bi bi-box" viewBox="0 0 16 16">
                       <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
                   </svg>
               </a>
+              <!-- print yahoo finance to show where link goes to-->
               <p>Yahoo Finance</p>
           </div>
           <div class="flex">
+              <!-- class for second icon -->
+              <!-- link to the MarketWatch website -->
               <a href="https://marketwatch.com" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                  <!-- code for accessing the icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2f5876" class="bi bi-newspaper" viewBox="0 0 16 16">
                       <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
                       <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
                   </svg>
               </a>
+              <!-- print MarketWatch to show where link goes to -->
               <p>MarketWatch</p>
           </div>
       </div>
   </div>
+  <!-- Link to popup.js for javascript code -->
   <script src="popup.js"></script>
 </body>
 </html>
