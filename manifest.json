@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Stock Log",
   "description": "Check the prices of stocks",
   "version": "1.0.0",
