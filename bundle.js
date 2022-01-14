@@ -3,7 +3,7 @@
 var request = require('request');
 
 // replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=TQDLS0XBBDSP3ABF';
+var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=TQDLS0XBBDSP3ABF';
 
 request.get({
     url: url,
