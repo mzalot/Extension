@@ -2,25 +2,29 @@
 'use strict';
 var request = require('request');
 
+var stock = 'IBM';
+document.getElementById("myButton").addEventListener("click", myFunction);
+function myFunction() {
+  var stock = document.getElementById("frm1");
+  }
 // replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=TQDLS0XBBDSP3ABF';
-
-
+var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
     url: url,
     json: true,
     headers: {'User-Agent': 'request'}
-  }, (err, res, data) => {
-    if (err) {
-      console.log('Error:', err);
-    } else if (res.statusCode !== 200) {
-      console.log('Status:', res.statusCode);
-    } else {
-      // data is successfully parsed as a JSON object:
-      console.log(data);
-      alert(JSON.stringify(data));
+    }, (err, res, data) => {
+      if (err) {
+        console.log('Error:', err);
+      } else if (res.statusCode !== 200) {
+        console.log('Status:', res.statusCode);
+      } else {
+        // data is successfully parsed as a JSON object:
+        console.log(data);
+        alert(JSON.stringify(data));
     }
 });
+
 
 
 },{"request":113}],2:[function(require,module,exports){

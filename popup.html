@@ -137,9 +137,12 @@
                       Enter a stock ticker
                   </div>
                   <div>
-                      <input type="text" class="ticker"/>
+                      <form id="frm1" action="/action_page.php">
+                          <input type="text" name="ticker"><br>
+                          <button id="myButton">Search</button>
+                          <input type="submit" value="Submit">
+                      </form>
                   </div>
-                  <button class="search">Search</button>
               </form>
           </div>
       </div>
