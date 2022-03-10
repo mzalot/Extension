@@ -1,0 +1,28 @@
+<html>
+<head>
+    <!-- setting up the base of the extension -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Log</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+</head>
+<body>
+<div style = "position:relative; top:20px;">
+<div class="search">
+    <form class="form-data">
+        <div class="enter-ticker">
+            Enter a stock ticker
+        </div>
+        <div>
+            <form id="frm1">
+                <input type="text" name="ticker" id="ticker"><br>
+                <button id="myButton" onclick="add(document.getElementById('ticker').value)" >Search</button>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </form>
+</div>
+</div>
+</body>
+</html>

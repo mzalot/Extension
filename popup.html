@@ -131,23 +131,11 @@
               <!-- print MarketWatch to show where link goes to -->
               <p>MarketWatch</p>
           </div>
-          <div class="search">
-              <form class="form-data">
-                  <div class="enter-ticker">
-                      Enter a stock ticker
-                  </div>
-                  <div>
-                      <form id="frm1">
-                          <input type="text" name="ticker" id="ticker"><br>
-                          <button id="myButton" onclick="add(document.getElementById('ticker').value)" >Search</button>
-                          <input type="submit" value="Submit">
-                      </form>
-                  </div>
-              </form>
-          </div>
       </div>
   </div>
-  <iframe src="sandbox.html" width="300" height="200"></iframe>
+  <div style = "position:relative; top:40px;">
+    <iframe src="sandbox.html" width="200" height="100"></iframe>
+  </div>
   <!-- Link to bundle.js for javascript code -->
   <script src="bundle.js"></script>
 </body>
