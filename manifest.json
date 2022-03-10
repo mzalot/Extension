@@ -11,5 +11,8 @@
   "permissions": ["activeTab"],
   "background": {
     "service_worker": "bundle.js"
+  },
+  "sandbox": {
+    "pages":["sandbox.html"]
   }
 }
