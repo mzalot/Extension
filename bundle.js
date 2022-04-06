@@ -3,10 +3,7 @@
 var request = require('request');
 
 var stock = 'IBM';
-function add(ticker) {
-    stock = ticker;
-    alert(stock);
-}
+
 var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
     url: url,
