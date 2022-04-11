@@ -3,9 +3,6 @@
 var request = require('request');
 
 var stock = 'IBM';
-chrome.storage.local.get( "myTicker", function(data) {
-    stock = data.myTicker;
-});
 var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
     url: url,
