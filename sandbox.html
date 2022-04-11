@@ -17,12 +17,15 @@
         <div>
             <form id="frm1">
                 <input type="text" name="ticker" id="ticker"><br>
-                <button id="myButton" onclick="add(document.getElementById('ticker').value)" >Search</button>
+                <button id="myButton" type="submit" >Search</button>
                 <input type="submit" value="Submit">
             </form>
         </div>
     </form>
 </div>
 </div>
+<script>
+    chrome.storage.local.set({ myTicker: myButton.value });
+</script>
 </body>
 </html>
