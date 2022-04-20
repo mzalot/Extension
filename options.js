@@ -1,6 +1,6 @@
 // Saves options to chrome.storage
 function save_options() {
-  var color = document.getElementById('myTicker').value;
+  var myTicker = document.getElementById('myTicker').value;
   chrome.storage.sync.set({
     tickerChoice: myTicker,
   }, function() {

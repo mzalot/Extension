@@ -3,7 +3,6 @@
   "name": "Stock Log",
   "description": "Check the prices of stocks",
   "version": "1.0.0",
-  "options_page": "options.html",
   "options_ui": {
     "page": "options.html",
     "open_in_tab": false
