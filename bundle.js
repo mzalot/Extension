@@ -3,6 +3,11 @@
 var request = require('request');
 
 var stock = 'IBM';
+chrome.storage.sync.get('tickerChoice', function(result) {
+  stock = result.tickerChoice;
+  console.log('Value currently is ' + result.key);
+});
+
 var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
     url: url,
