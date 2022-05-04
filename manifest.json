@@ -13,9 +13,9 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab"
   ],
-  "permissions": ["activeTab"],
   "background": {
     "service_worker": "bundle.js"
   },
