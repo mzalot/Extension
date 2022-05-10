@@ -6,8 +6,9 @@ document.querySelector('#go-to-options').addEventListener('click', function() {
   }
 });
 console.log('hello')
-var stock = 'NFLX';
+var stock = 'AAPL';
 chrome.storage.sync.get([myTicker], function(result) {
+  stock = result.myTicker
   console.log('Value currently is ' + result.myTicker);
 });
 chrome.storage.sync.get([hello], function(result) {

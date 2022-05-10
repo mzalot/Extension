@@ -1,7 +1,11 @@
 console.log('in options');
-var myTicker = "NFLX"
-chrome.storage.sync.set({[myTicker]: myTicker}, function() {
-  console.log('Value is set to ' + myTicker);
-});
 
+var myTicker = "myTicker"
+function add(){
+    chrome.storage.sync.set({[myTicker]:'NFLX'}, function() {
+      console.log('Value is set to ' + myTicker);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', add());
 
