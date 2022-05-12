@@ -7,5 +7,5 @@ function add(){
     });
 }
 
-document.addEventListener('DOMContentLoaded', add());
+
 

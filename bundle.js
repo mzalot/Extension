@@ -1,22 +1,163 @@
-document.querySelector('#go-to-options').addEventListener('click', function() {
-  if (chrome.runtime.openOptionsPage) {
-    chrome.runtime.openOptionsPage();
-  } else {
-    window.open(chrome.runtime.getURL('options.html'));
-  }
-});
-console.log('hello')
+//document.querySelector('#go-to-options').addEventListener('click', function() {
+//  if (chrome.runtime.openOptionsPage) {
+//    chrome.runtime.openOptionsPage();
+//  } else {
+//    window.open(chrome.runtime.getURL('options.html'));
+//  }
+//});
+//console.log('hello')
 var stock = 'AAPL';
-chrome.storage.sync.get([myTicker], function(result) {
-  stock = result.myTicker
-  console.log('Value currently is ' + result.myTicker);
-});
-chrome.storage.sync.get([hello], function(result) {
-  console.log('Value currently is ' + result.hello);
-});
+//chrome.storage.sync.get([myTicker], function(result) {
+//  stock = result.myTicker
+//  console.log('Value currently is ' + result.myTicker);
+//});
+//chrome.storage.sync.get([hello], function(result) {
+//  console.log('Value currently is ' + result.hello);
+//});
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 var request = require('request');
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=DHX&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check2');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=NFLX&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check3');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AAPL&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check4');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check5');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check6');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=CCJ&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+document.addEventListener('DOMContentLoaded', function() {
+  var checkButton = document.getElementById('check7');
+  checkButton.addEventListener('click', function() {
+   var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=PTON&apikey=TQDLS0XBBDSP3ABF';
+   request.get({
+       url: url,
+       json: true,
+       headers: {'User-Agent': 'request'}
+     }, (err, res, data) => {
+       if (err) {
+         console.log('Error:', err);
+       } else if (res.statusCode !== 200) {
+         console.log('Status:', res.statusCode);
+       } else {
+         console.log(data);
+         alert(JSON.stringify(data));
+       }
+   });
+  }, false);
+}, false);
+/*
 var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
     url: url,
@@ -32,7 +173,7 @@ request.get({
       alert(JSON.stringify(data));
     }
 });
-
+*/
 
 
 },{"request":113}],2:[function(require,module,exports){
