@@ -7,3 +7,4 @@ Sandbox.html: This file is the sandbox page I created to try and allow a search 
 Popup.html: This file is the heart of the code. It is the code for the popup itself, which is what you see when you open the extension. It is where I added all the text, pictures, links, buttons, and script sources.
 Bundle.js: This file runs the API. It uses the buttons at the bottom of the extension to run an instance of the API.
 Main.js: This file is a test script which I used to test how chrome storage works.
+How to run the extension: https://docs.google.com/document/d/1zKKR6NUrCWa-Hi6Df7-XKLXq4etMY-BTXmX0S7NXRIE/edit?usp=sharing
