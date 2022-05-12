@@ -1,4 +1,7 @@
 {
+  "comment1":"Header(only way to comment):Manifest.json, This program tells my extension what to do and sets it up",
+  "comment2":"Mareks Zeile, 5/12/22",
+  "comment3":"On My Honor, I confirm that I followed all collaboration policy guidelines, and that the work I am submitting is my own: MZ",
   "manifest_version": 3,
   "name": "Stock Log",
   "description": "Check the prices of stocks",

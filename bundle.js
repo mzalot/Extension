@@ -1,3 +1,17 @@
+/*
+Bundle.js
+ The program is background script for my extension
+ Author: Mareks Zeile
+ Collaborator(s):
+ Collaboration:
+ Date: 5/12/22
+ On My Honor, I confirm that I followed all collaboration policy guidelines, and that the work I am submitting is my own: MZ
+*/
+
+
+/*
+This code takes the button and opens the options page
+*/
 //document.querySelector('#go-to-options').addEventListener('click', function() {
 //  if (chrome.runtime.openOptionsPage) {
 //    chrome.runtime.openOptionsPage();
@@ -6,7 +20,11 @@
 //  }
 //});
 //console.log('hello')
-var stock = 'AAPL';
+
+/*
+This code were my attempts to retrieve values from chrome storage
+*/
+//var stock = 'AAPL';
 //chrome.storage.sync.get([myTicker], function(result) {
 //  stock = result.myTicker
 //  console.log('Value currently is ' + result.myTicker);
@@ -14,9 +32,17 @@ var stock = 'AAPL';
 //chrome.storage.sync.get([hello], function(result) {
 //  console.log('Value currently is ' + result.hello);
 //});
+
+/*
+This long line is the code which allows my API to run becuase it needs require which the code below allows.
+*/
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 var request = require('request');
+
+/*
+This code takes the button for the stocks and runs the API with the specific stock
+*/
 document.addEventListener('DOMContentLoaded', function() {
   var checkButton = document.getElementById('check');
   checkButton.addEventListener('click', function() {
@@ -157,6 +183,10 @@ document.addEventListener('DOMContentLoaded', function() {
    });
   }, false);
 }, false);
+
+/*
+This code was the original code for calling the API.
+*/
 /*
 var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + stock + '&apikey=TQDLS0XBBDSP3ABF';
 request.get({
@@ -175,7 +205,9 @@ request.get({
 });
 */
 
-
+/*
+This is the rest of the code which makes require work.
+*/
 },{"request":113}],2:[function(require,module,exports){
 'use strict';
 
